@@ -31,11 +31,14 @@ class CarruselImagen extends StatelessWidget {
               imagen,
               Container(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 width: double.infinity,
                 color: AppColor.white,
-                height: 150,
+                height: MediaQuery.sizeOf(context).height / 4.2,
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
                   children: [
                     AutoSizeText(title,
                         maxFontSize: 30,
@@ -84,7 +87,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
           child: Column(children: [
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.64,
+          height: MediaQuery.of(context).size.height * 0.8,
           child: PageView(
             onPageChanged: (value) {
               setState(() {
